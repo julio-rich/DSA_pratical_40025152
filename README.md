@@ -1,2 +1,2 @@
-# DSA_pratical_40025152
+# Julio ATTISSO DSA_pratical
 Data structures implementations 
