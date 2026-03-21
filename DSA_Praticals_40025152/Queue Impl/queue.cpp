@@ -15,6 +15,41 @@ public:
     Queue() {
         front = rear = NULL;
     }
+bool IsEmpty() {
+        if (front == NULL) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    int size() {
+        int count = 0;
+        Node* temp = front;
+        while (temp != NULL) {
+            count++;
+            temp = temp->next;
+        }
+        return count;
+    }   
+
+    int frontElement() {
+        if (front != NULL) {
+            return front->data;
+        } else {
+            cout << "Queue is empty\n";
+            return -1; 
+        }
+    }
+
+    int backElement() {
+        if (rear != NULL) {
+            return rear->data;
+        } else {
+            cout << "Queue is empty\n";
+            return -1; 
+        }
+    }
 
     void enqueue(int x) {
         Node* temp = new Node();
@@ -54,4 +89,5 @@ public:
         }
         cout << endl;
     }
+
 };
