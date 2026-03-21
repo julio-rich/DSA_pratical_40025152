@@ -13,18 +13,23 @@ class stack {
     }
 
     bool empty(){
-        return(top == -1);
+        if (top == -1){
+            return true;
+    }else {
+            return false;
+        }
     }
 
     int size(){
         return top + 1;
     }
 
-    void push(int x){
+    void push(int item){
         if(top == MAX-1) {
             cout <<"Stack Overflow\n";
         } else {
-            A[++top] = x;
+            top++;
+            A[top] = item;
         }
     }
 
@@ -37,11 +42,11 @@ class stack {
     }
 
     int Top() {
-        if(top == -1) {
+        if(IsEmpty() {
             cout << "Stack is Empty\n";
-            return -1;
-        }
-        return A[top];
+        } else {
+            S[top] = 0;
+            top--;
     }
 };
 
